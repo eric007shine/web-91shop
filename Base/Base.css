@@ -1,0 +1,42 @@
+body,
+ul,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+table,
+td,
+img,
+div,
+dl,
+dt,
+dd,
+input { 
+	margin: 0;
+	padding: 0; 
+}
+*{
+box-sizing: border-box;
+font-family: -apple-system, BlinkMacSystemFont, "PingFang SC","Helvetica Neue",STHeiti,"Microsoft Yahei",Tahoma,Simsun,sans-serif;
+}
+body, p, h1, h2, h3, h4, h5, h6{
+margin: 0;
+}
+div{
+font-size: initial;
+}
+ul{
+list-style: none;
+margin: 0;
+padding: 0;
+}
+a{
+text-decoration: none;
+}

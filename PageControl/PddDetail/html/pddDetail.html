@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <title>PDDdetail</title>
+    <script>document.documentElement.style.fontSize = document.documentElement.getBoundingClientRect().width / 3.60 + 'px';</script>
+    <link rel="stylesheet" href="../../../Base/Base.css?v=1.0">
+    <link rel="stylesheet" href="../../PddDetail/css/pddDetail.css?v=1.0">
+    <script src="../../../HttpApi/WXBizDataCrypt.min.js"></script>
+    <script src="../../../HttpApi/crypto.min.js"></script>
+    <script src="../../PddDetail/js/pddDetail.js?v=1.0"></script>
+    <link rel="stylesheet" href="../../../Library/Swiper/swiper.min.css">
+    <script src="../../../Library/Swiper/swiper.min.js"></script>
+    <script src="../../../HttpApi/HttpApi.js?v=1.0"></script>
+</head>
+<body>
+<div class="pddDetailPage">
+    <!-- 导航栏 -->
+    <div class="navBar">
+        <p class="navBarTitle">商品详情</p>
+        <img src="../../../Image/CommodityDetail_back_icon.png" class="navBarLeftImg">
+        <img src="../../../Image/CommodityDetail_fankui_icon.png" class="navBarRightImg" onclick="feedBackClick()">
+        <div class="navBarLine"></div>
+    </div>
+    <!-- 轮播 -->
+    <div class="banner">
+        <div class="swiper-container">
+            <div class="swiper-wrapper" id="Swiper">
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <!-- 标题信息详情 -->
+    <div class="infoDetail">
+        <p class="info-title">  
+            <i class="info-title-icon"></i>
+            <span id="ProductTitle"></span>
+        </p>
+        <div class="info-money-num">
+            <span class="info-youhuiPriceExt">￥
+                <span class="info-youhuiPrice" id="ProductYouHuiPrice"></span>
+            </span>
+            <span class="info-zkFinalPrice" id="ProductZKfinalPrice"></span>
+            <span class="info-num" id="ProductHasBuyNumber"></span>
+        </div>
+        <div class="info-middleLine"></div>
+        <div class="info-shopName">
+            <img src="../../../Image/PDDcommodityDetail_shop_icon.png" class="info-shopNameIcon">
+            <span class="info-shopNameExt">商品店铺:</span>
+            <span class="info-shopName" id="ProductShopName"></span>
+        </div>
+    </div>
+    <!-- 评分 -->
+    <div class="scoreDetail">
+        <span class="TypeScoreExt">服务评分
+            <span class="TypeScore" id="ProductFWscore">
+            </span>
+        </span>
+        <span class="TypeScoreExt">描述评分
+            <span class="TypeScore" id="ProductMSscore">
+            </span>
+        </span>
+        <span class="TypeScoreExt">物料评分
+            <span class="TypeScore" id="ProductWLscore">
+            </span>
+        </span>
+    </div>
+    <!-- 分割线 -->
+    <div class="spaceLine"></div>
+    <!-- 商品详情 -->
+    <div class="ProductSPXQ">
+        <img src="../../../Image/CommodityDetail_spxq_icon.png" class="ProductSPXQicon">
+    </div>
+    <div class="ProductDescBg">
+        <p class="ProductDesc">
+            <i class="ProductDescIcon"></i>
+            <span id="ProductDescLabel"></span>
+        </p>
+    </div>
+    <!-- 图片列表 -->
+    <div>
+        <ul class="pictureBg" id="ProductPicUrl">
+        </ul>
+    </div>
+    <!-- 你可能还喜欢 -->
+    <div class="ProductSPXQ">
+        <img src="../../../Image/PDDcommodityDetail_nknhxh_icon.png" class="ProductSPXQicon">
+    </div>
+    <div>
+        <ul class="YouLove" id="OtherProductID"> </ul>
+    </div>
+    <!-- 底部空白 -->
+    <div class="bottomEmpty">
+        <img src="../../../Image/NoMoreLogo.png" class="nomorelogo">
+    </div> 
+   <!-- 意见反馈弹窗 -->
+    <div class="FeedBack" id="FeedBackBombox">
+        <div class="mask" id="mask" onclick="FeedBackBalckBgClick()"></div>
+        <div class="FeedBackWhiteBg" id="FeedBackWhiteBg">
+            <div class="FeedBackWhite">
+                <div class="FeedBackTitleBg">
+                    <p class="FeedBackTitle">请选择该商品的问题反馈:</p>
+                </div>
+                <div class="FeedBackBtn" onclick="FeedBackBtnClick(event,'无法领取优惠券')">
+                    <p class="FeedBackBtnTitle">无法领取优惠券</p>
+                </div>
+                <div class="FeedBackSmallLine"></div>
+                <div class="FeedBackBtn" onclick="FeedBackBtnClick(event,'价格不符')">
+                    <p class="FeedBackBtnTitle">价格不符</p>
+                </div>
+                <div class="FeedBackBigLine"></div>
+                <div class="FeedBackBtn">
+                    <p class="FeedBackBtnTitle">取消</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 购买按钮 -->
+    <div class="BuyBtn">
+        <p class="BuyBtnTitle">立即购买</p>
+    </div>
+</div>
+</body>
+</html>
